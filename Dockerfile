@@ -11,5 +11,5 @@ RUN mkdir -p /usr/local/share/proxy-cache \
   && chown apache /usr/local/share/proxy-cache
 USER apache
 
-EXPOSE 80 443
+EXPOSE 80 8080 443
 ENTRYPOINT ["exec", "httpd","-DFOREGROUND"]
