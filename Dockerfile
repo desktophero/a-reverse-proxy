@@ -12,4 +12,4 @@ RUN mkdir -p /usr/local/share/proxy-cache \
 USER apache
 
 EXPOSE 80 443
-ENTRYPOINT ["httpd","-DFOREGROUND"]
+ENTRYPOINT ["exec", "httpd","-DFOREGROUND"]
