@@ -10,6 +10,6 @@ RUN set -x \
 RUN mkdir -p /usr/local/share/proxy-cache \
   && chown apache /usr/local/share/proxy-cache
 USER apache
-
+COPY httpd.conf /etc/apache2/httpd.conf
 EXPOSE 80 8080 443
 ENTRYPOINT ["/usr/sbin/httpd","-DFOREGROUND"]
